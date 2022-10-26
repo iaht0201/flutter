@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:g5/Form/register_page.dart';
+import 'package:g5/ig.dart';
+import 'package:g5/product_page.dart';
 
 class Login extends StatelessWidget {
   Login({Key? key}) : super(key: key);
@@ -110,7 +112,11 @@ class Login extends StatelessWidget {
                                   content: Text("Xin chào, ${userName}"));
                               ScaffoldMessenger.of(context)
                                   .showSnackBar(snackBar);
+                              Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => ProductListPage(),
+                              ));
                             }
+
                           },
                           child: const Text(
                             "Đăng nhập",
